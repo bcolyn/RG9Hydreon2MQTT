@@ -1,0 +1,5 @@
+.venv/
+.run/
+.idea/
+tools/
+local.env

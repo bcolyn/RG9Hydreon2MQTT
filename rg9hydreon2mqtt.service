@@ -1,0 +1,14 @@
+[Unit]
+Description=RG9Hydreon2MQTT service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=%h/RG9Hydreon2MQTT/.venv/bin/python src/main.py
+Environment=PYTHONUNBUFFERED=1
+WorkingDirectory=%h/RG9Hydreon2MQTT
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=default.target
